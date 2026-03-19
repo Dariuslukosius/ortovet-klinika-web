@@ -11,7 +11,29 @@ import PricesPage from "./pages/PricesPage.tsx";
 import GalleryPage from "./pages/GalleryPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop.tsx";
+
 const queryClient = new QueryClient();
+
+const AnimatedRoutes = () => {
+  const location = useLocation();
+  return (
+    <div key={location.pathname} className="animate-fade-in">
+      <Routes location={location}>
+        <Route path="/" element={<Index />} />
+        <Route path="/blog" element={<BlogList />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/paslaugos" element={<ServicesPage />} />
+        <Route path="/kainos" element={<PricesPage />} />
+        <Route path="/galerija" element={<GalleryPage />} />
+        {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </div>
+  );
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -19,16 +41,8 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/blog" element={<BlogList />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/paslaugos" element={<ServicesPage />} />
-          <Route path="/kainos" element={<PricesPage />} />
-          <Route path="/galerija" element={<GalleryPage />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <ScrollToTop />
+        <AnimatedRoutes />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
