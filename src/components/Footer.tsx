@@ -5,22 +5,22 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer role="contentinfo" aria-label="Puslapio apačia – Apex Vet Care kontaktai ir navigacija" className="bg-primary text-primary-foreground">
+    <footer role="contentinfo" aria-label="Puslapio apačia – Ortovet kontaktai ir navigacija" className="bg-primary text-primary-foreground">
       <div className="container-custom py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-5">
-              <span className="text-2xl font-bold text-white tracking-tight">Apex Vet Care</span>
+              <img src={logo} alt="Ortovet" className="h-16 w-auto object-contain bg-white rounded-xl p-2" />
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-5">
               Profesionali veterinarijos klinika Kaune. Rūpinamės jūsų augintinių sveikata su meile ir ekspertize.
             </p>
             <div className="flex gap-3">
-              <a href="#" aria-label="Apex Vet Care Facebook" className="w-9 h-9 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary-foreground/20 transition-colors">
+              <a href="#" aria-label="Ortovet Facebook" className="w-9 h-9 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary-foreground/20 transition-colors">
                 <Facebook size={16} aria-hidden="true" />
               </a>
-              <a href="#" aria-label="Apex Vet Care Instagram" className="w-9 h-9 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary-foreground/20 transition-colors">
+              <a href="#" aria-label="Ortovet Instagram" className="w-9 h-9 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary-foreground/20 transition-colors">
                 <Instagram size={16} aria-hidden="true" />
               </a>
             </div>
@@ -99,7 +99,7 @@ export default function Footer() {
       <div className="border-t border-primary-foreground/10">
         <div className="container-custom py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-primary-foreground/50 text-xs">
-            © {year} Apex Vet Care veterinarijos klinika. Visos teisės saugomos.
+            © {year} Ortovet veterinarijos klinika. Visos teisės saugomos.
           </p>
           <p className="text-primary-foreground/40 text-xs flex items-center gap-1">
             Sukurta su <Heart size={11} className="fill-current" aria-hidden="true" /> gyvūnų gerovei
