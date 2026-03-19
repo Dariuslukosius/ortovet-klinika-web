@@ -47,17 +47,17 @@ export default function Hero() {
           </div>
 
           {/* H1 – SEO pagrindinis raktažodis */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gradient-hero leading-[1.08] tracking-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-gradient-hero leading-[1.08] tracking-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
             Veterinarijos{" "}
             <span className="block text-white">Klinika —</span>
             <span className="block" style={{ color: "hsl(152 70% 70%)" }}>Ortovet Kaune</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mb-8 leading-relaxed animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-2xl mb-8 leading-relaxed animate-fade-up" style={{ animationDelay: "0.2s" }}>
             Ortovet — moderniausia veterinarijos klinika Kaune. Teikiame aukščiausio lygio 
             veterinarines paslaugas su šiluma ir profesionalumu. Priimame{" "}
-            <strong className="text-primary-foreground">iki 21:00</strong> darbo dienomis.
+            <strong className="text-primary-foreground font-bold">iki 21:00</strong> darbo dienomis.
           </p>
 
           {/* CTAs */}

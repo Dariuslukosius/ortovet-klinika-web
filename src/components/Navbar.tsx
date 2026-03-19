@@ -5,8 +5,7 @@ import logo from "@/assets/logo.jpg";
 
 const navLinks = [
   { href: "/#apie-mus", label: "Apie mus" },
-  { href: "/#kodl", label: "Kodėl mes" },
-  { href: "/paslaugos", label: "Paslaugos" },
+  { href: "/#paslaugos", label: "Paslaugos" },
   { href: "/kainos", label: "Kainos" },
   { href: "/galerija", label: "Galerija" },
   { href: "/#atsiliepimai", label: "Atsiliepimai" },
@@ -41,7 +40,7 @@ export default function Navbar() {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link to="/" aria-label="Ortovet – grįžti į pradžią" className="flex items-center gap-3 group">
-            <img src={logo} alt="Ortovet" className="h-10 w-auto object-contain" />
+            <img src={logo} alt="Ortovet" className="h-14 w-auto object-contain" />
           </Link>
 
           <nav role="navigation" aria-label="Svetainės navigacija" className="hidden md:flex items-center gap-1">

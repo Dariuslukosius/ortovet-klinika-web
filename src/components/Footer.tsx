@@ -12,9 +12,9 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-5">
-              <img src={logo} alt="Ortovet" className="h-16 w-auto object-contain bg-white rounded-xl p-2" />
+              <img src={logo} alt="Ortovet" className="h-20 w-auto object-contain bg-white rounded-xl p-2" />
             </div>
-            <p className="text-primary-foreground/70 text-sm leading-relaxed mb-5">
+            <p className="text-primary-foreground/90 text-base leading-relaxed mb-5">
               Profesionali veterinarijos klinika Kaune. Rūpinamės jūsų augintinių sveikata su meile ir ekspertize.
             </p>
             <div className="flex gap-3">
@@ -29,20 +29,25 @@ export default function Footer() {
 
           {/* Navigation */}
           <nav aria-label="Puslapio navigacija">
-            <h3 className="font-bold text-base mb-5">Navigacija</h3>
-            <ul className="space-y-2.5">
+            <h3 className="font-bold text-lg mb-5">Navigacija</h3>
+            <ul className="space-y-3">
               {[
                 ["/#paslaugos", "Paslaugos"],
                 ["/#apie-mus", "Apie mus"],
-                ["/#kodl", "Kodėl mes"],
                 ["/#atsiliepimai", "Atsiliepimai"],
                 ["/blog", "Blogas"],
                 ["/#kontaktai", "Kontaktai"],
               ].map(([href, label]) => (
                 <li key={href}>
-                  <Link to={href} className="text-primary-foreground/70 text-sm hover:text-primary-foreground transition-colors">
-                    {label}
-                  </Link>
+                  {href.startsWith("/#") ? (
+                    <a href={href} className="text-primary-foreground/90 text-base hover:text-primary-foreground transition-colors">
+                      {label}
+                    </a>
+                  ) : (
+                    <Link to={href} className="text-primary-foreground/90 text-base hover:text-primary-foreground transition-colors">
+                      {label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
