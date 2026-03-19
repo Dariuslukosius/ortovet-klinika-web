@@ -61,7 +61,7 @@ export default function Contact() {
                 className="flex items-center gap-4 group"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors" aria-hidden="true">
-                  <Mail size={20} className="text-primary" />
+                  <Mail size={20} className="text-primary" /> 
                 </div>
                 <div>
                   <div className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-0.5">El. paštas</div>
