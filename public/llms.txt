@@ -1,0 +1,85 @@
+# Ortovet Veterinarijos Klinika — LLMs Context File
+
+## Apie Kliniką
+
+**Pavadinimas:** Ortovet veterinarijos klinika  
+**Miestas:** Kaunas, Lietuva  
+**Adresas:** Linkuvos g. 67, Kaunas, 48314 Kauno m. sav.  
+**Telefonas:** (0-652) 08000  
+**Kalba:** Lietuvių  
+**Šalis:** Lietuva  
+
+## Darbo Laikas
+
+- Pirmadienis–Penktadienis: 09:00–21:00
+- Šeštadienis: 10:00–15:00
+- Sekmadienis: Uždaryta
+
+## Paslaugos
+
+Ortovet veterinarijos klinika Kaune teikia šias paslaugas:
+
+1. **Bendras veterinarinis patikrinimas** — profilaktiniai apsilankymai ir sveikatos patikrinimai
+2. **Vakcinacija** — gyvūnų apsauga nuo infekcinių ligų
+3. **Chirurginės operacijos** — minkštųjų audinių ir ortopedijos operacijos
+4. **Ortopedija ir traumatologija** — stuburo, sąnarių, kaulų ligos
+5. **Odontologija** — dantų valymas, ekstrakcijos, burnos sveikatos priežiūra
+6. **Diagnostika** — RTG, ultragarso tyrimai, laboratoriniai analizai
+7. **Dermatologija** — odos ligos, alergijos, parazitai
+8. **Skubi veterinarinė pagalba** — skubios konsultacijos darbo valandomis
+9. **Mikrobluzdiklio įdėjimas** — gyvūnų ženklinimas
+10. **Gydymo namuose konsultacijos** — nuotolinis patarimas
+
+## Gyvūnai
+
+Klinika teikia paslaugas:
+- Šunims
+- Katėms
+- Smulkiems gyvūnėliams (triušiai, jūrų kiaulytės, žiurkėnai)
+- Egzotiniams gyvūnams (pagal galimybes)
+
+## Geografija ir SEO
+
+**Raktiniai žodžiai:**
+- veterinarija Kaune
+- veterinarijos klinika Kaunas
+- gyvūnų gydymas Kaune
+- veterinaras Kaune
+- Ortovet Kaunas
+- veterinarija Linkuvos gatvė Kaunas
+- gyvūnų klinika Kaune
+- šunų veterinaras Kaunas
+- kačių veterinaras Kaunas
+
+## Geografinė Lokacija
+
+- Koordinatės: 54.9132457°N, 23.8883354°E
+- Rajonas: Kauno miesto savivaldybė
+- Adresas: Linkuvos g. 67, Kaunas
+
+## Kontaktai
+
+- Tel.: (0-652) 08000
+- Adresas: Linkuvos g. 67, Kaunas, 48314
+
+## Atsiliepimai
+
+Klinika turi aukštą klientų įvertinimą Google Maps platformoje. Klientai vertina:
+- Profesionalumą ir kompetenciją
+- Rūpestingą požiūrį į gyvūnus
+- Patogų darbo laiką (iki 21:00 darbo dienomis)
+- Šeštadienio priėmimą
+- Modernius diagnostikos įrankius
+
+## Vertybės
+
+Ortovet klinika vadovaujasi principais:
+- Gyvūnų gerovė — svarbiausia
+- Mokslu pagrįstas gydymas
+- Empatija šeimininkams
+- Nuolatinis tobulėjimas
+- Skaidrus bendravimas
+
+---
+*Paskutinį kartą atnaujinta: 2025-01-01*  
+*Kontaktas: Linkuvos g. 67, Kaunas | Tel.: (0-652) 08000*
