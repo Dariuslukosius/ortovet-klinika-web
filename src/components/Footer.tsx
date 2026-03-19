@@ -32,14 +32,14 @@ export default function Footer() {
             <h3 className="font-bold text-lg mb-5">Navigacija</h3>
             <ul className="space-y-3">
               {[
-                ["/#paslaugos", "Paslaugos"],
+                ["/paslaugos", "Paslaugos"],
                 ["/#apie-mus", "Apie mus"],
                 ["/#atsiliepimai", "Atsiliepimai"],
                 ["/blog", "Blogas"],
                 ["/#kontaktai", "Kontaktai"],
               ].map(([href, label]) => (
                 <li key={href}>
-                  {href.startsWith("/#") ? (
+                  {href.includes("#") ? (
                     <a href={href} className="text-primary-foreground/90 text-base hover:text-primary-foreground transition-colors">
                       {label}
                     </a>
@@ -59,7 +59,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {["Bendras patikrinimas", "Vakcinacija", "Chirurgija", "Ortopedija", "Odontologija", "Diagnostika"].map((s) => (
                 <li key={s}>
-                  <a href="#paslaugos" className="text-primary-foreground/70 text-sm hover:text-primary-foreground transition-colors">{s}</a>
+                  <Link to="/paslaugos" className="text-primary-foreground/70 text-sm hover:text-primary-foreground transition-colors">{s}</Link>
                 </li>
               ))}
             </ul>
