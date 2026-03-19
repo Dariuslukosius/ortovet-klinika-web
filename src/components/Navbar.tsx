@@ -40,8 +40,8 @@ export default function Navbar() {
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="/" aria-label="Ortovet – grįžti į pradžią" className="flex items-center gap-3 group">
-          <img src={logo} alt="Ortovet" className="h-10 w-auto object-contain" />
+          <a href="/" aria-label="Apex Vet Care – grįžti į pradžią" className="flex items-center gap-3 group">
+            <span className="text-xl md:text-2xl font-bold text-gradient-primary tracking-tight">Apex Vet Care</span>
           </a>
 
           <nav role="navigation" aria-label="Svetainės navigacija" className="hidden md:flex items-center gap-1">
