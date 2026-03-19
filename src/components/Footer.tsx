@@ -18,10 +18,10 @@ export default function Footer() {
               Profesionali veterinarijos klinika Kaune. Rūpinamės jūsų augintinių sveikata su meile ir ekspertize.
             </p>
             <div className="flex gap-3">
-              <a href="#" aria-label="Ortovet Facebook" className="w-9 h-9 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary-foreground/20 transition-colors">
+              <a href="https://www.facebook.com/ortovet.lt?locale=lt_LT" target="_blank" rel="noopener noreferrer" aria-label="Ortovet Facebook" className="w-9 h-9 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary-foreground/20 transition-colors">
                 <Facebook size={16} aria-hidden="true" />
               </a>
-              <a href="#" aria-label="Ortovet Instagram" className="w-9 h-9 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary-foreground/20 transition-colors">
+              <a href="https://www.instagram.com/ortovet.lt/" target="_blank" rel="noopener noreferrer" aria-label="Ortovet Instagram" className="w-9 h-9 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-primary-foreground/20 transition-colors">
                 <Instagram size={16} aria-hidden="true" />
               </a>
             </div>
