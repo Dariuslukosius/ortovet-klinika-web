@@ -5,7 +5,7 @@ import logo from "@/assets/logo.jpg";
 
 const navLinks = [
   { href: "/#apie-mus", label: "Apie mus" },
-  { href: "/#paslaugos", label: "Paslaugos" },
+  { href: "/paslaugos", label: "Paslaugos" },
   { href: "/kainos", label: "Kainos" },
   { href: "/galerija", label: "Galerija" },
   { href: "/#atsiliepimai", label: "Atsiliepimai" },
@@ -45,15 +45,27 @@ export default function Navbar() {
 
           <nav role="navigation" aria-label="Svetainės navigacija" className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-primary/10 hover:text-primary ${
-                  isDark ? "text-foreground" : "text-primary-foreground hover:bg-white/15 hover:text-white"
-                }`}
-              >
-                {link.label}
-              </Link>
+              link.href.includes("#") ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-primary/10 hover:text-primary ${
+                    isDark ? "text-foreground" : "text-primary-foreground hover:bg-white/15 hover:text-white"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-primary/10 hover:text-primary ${
+                    isDark ? "text-foreground" : "text-primary-foreground hover:bg-white/15 hover:text-white"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </nav>
 
@@ -95,14 +107,25 @@ export default function Navbar() {
         >
           <div className="container-custom py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
-                onClick={() => setMenuOpen(false)}
-                className="px-4 py-3 rounded-lg text-sm font-medium text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
-              >
-                {link.label}
-              </Link>
+              link.href.includes("#") ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="px-4 py-3 rounded-lg text-sm font-medium text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="px-4 py-3 rounded-lg text-sm font-medium text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
             <a
               href="tel:+37065208000"
