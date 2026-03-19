@@ -38,9 +38,9 @@ export default function Navbar() {
       aria-label="Pagrindinis meniu"
     >
       <div className="container-custom">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-20 md:h-24">
           <Link to="/" aria-label="Ortovet – grįžti į pradžią" className="flex items-center gap-3 group">
-            <img src={logo} alt="Ortovet" className="h-14 w-auto object-contain" />
+            <img src={logo} alt="Ortovet" className="h-16 md:h-20 w-auto object-contain rounded-2xl" />
           </Link>
 
           <nav role="navigation" aria-label="Svetainės navigacija" className="hidden md:flex items-center gap-1">
