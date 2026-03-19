@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Phone, Menu, X } from "lucide-react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
 
 const navLinks = [
@@ -40,21 +40,21 @@ export default function Navbar() {
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="/" aria-label="Ortovet – grįžti į pradžią" className="flex items-center gap-3 group">
-          <img src={logo} alt="Ortovet" className="h-10 w-auto object-contain" />
-          </a>
+          <Link to="/" aria-label="Ortovet – grįžti į pradžią" className="flex items-center gap-3 group">
+            <img src={logo} alt="Ortovet" className="h-10 w-auto object-contain" />
+          </Link>
 
           <nav role="navigation" aria-label="Svetainės navigacija" className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-primary/10 hover:text-primary ${
                   isDark ? "text-foreground" : "text-primary-foreground hover:bg-white/15 hover:text-white"
                 }`}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -96,14 +96,14 @@ export default function Navbar() {
         >
           <div className="container-custom py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 onClick={() => setMenuOpen(false)}
                 className="px-4 py-3 rounded-lg text-sm font-medium text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <a
               href="tel:+37065208000"

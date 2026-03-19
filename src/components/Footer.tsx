@@ -1,4 +1,5 @@
 import { Phone, MapPin, Clock, Heart, Facebook, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
 
 export default function Footer() {
@@ -31,17 +32,17 @@ export default function Footer() {
             <h3 className="font-bold text-base mb-5">Navigacija</h3>
             <ul className="space-y-2.5">
               {[
-                ["#paslaugos", "Paslaugos"],
-                ["#apie-mus", "Apie mus"],
-                ["#kodl", "Kodėl mes"],
-                ["#atsiliepimai", "Atsiliepimai"],
-                ["#blog", "Blogas"],
-                ["#kontaktai", "Kontaktai"],
+                ["/#paslaugos", "Paslaugos"],
+                ["/#apie-mus", "Apie mus"],
+                ["/#kodl", "Kodėl mes"],
+                ["/#atsiliepimai", "Atsiliepimai"],
+                ["/blog", "Blogas"],
+                ["/#kontaktai", "Kontaktai"],
               ].map(([href, label]) => (
                 <li key={href}>
-                  <a href={href} className="text-primary-foreground/70 text-sm hover:text-primary-foreground transition-colors">
+                  <Link to={href} className="text-primary-foreground/70 text-sm hover:text-primary-foreground transition-colors">
                     {label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
