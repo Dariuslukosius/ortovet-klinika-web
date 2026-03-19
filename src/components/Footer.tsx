@@ -78,6 +78,15 @@ export default function Footer() {
                   <div className="text-sm font-semibold group-hover:text-primary-foreground/80 transition-colors">(0-652) 08000</div>
                 </div>
               </a>
+              <a href="mailto:ortovetklinika@gmail.com" className="flex items-center gap-3 group">
+                <div className="w-9 h-9 bg-primary-foreground/10 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-primary-foreground/20 transition-colors" aria-hidden="true">
+                  <Mail size={15} />
+                </div>
+                <div>
+                  <div className="text-xs text-primary-foreground/50 mb-0.5">El. paštas</div>
+                  <div className="text-sm font-semibold group-hover:text-primary-foreground/80 transition-colors lowercase">ortovetklinika@gmail.com</div>
+                </div>
+              </a>
               <div className="flex items-start gap-3">
                 <div className="w-9 h-9 bg-primary-foreground/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5" aria-hidden="true">
                   <MapPin size={15} />
