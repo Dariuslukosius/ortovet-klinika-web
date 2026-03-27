@@ -1,93 +1,22 @@
-import { 
-  Stethoscope, Syringe, Scissors, Bone, 
-  FlaskConical, Eye, Microscope, HeartPulse, 
-  Zap, Heart
-} from "lucide-react";
-
-const services = [
-  {
-    icon: Stethoscope,
-    title: "Bendras patikrinimas",
-    description: "Visapusiškas jūsų augintinio sveikatos patikrinimas, prevencinės priemonės ir individualios rekomendacijos.",
-    color: "primary",
-  },
-  {
-    icon: Syringe,
-    title: "Vakcinacija",
-    description: "Apsaugokite savo augintinį nuo infekcinių ligų. Standartinės ir kelioninės vakcinacijos pagal tarptautinius protokolus.",
-    color: "secondary",
-  },
-  {
-    icon: Bone,
-    title: "Ortopedija",
-    description: "Specializuotas kaulų, sąnarių ir raumenų ligų gydymas. Stuburo traumų diagnostika ir chirurgija.",
-    color: "accent",
-  },
-  {
-    icon: Scissors,
-    title: "Chirurgija",
-    description: "Minkštųjų audinių operacijos, sterilizacija, kastracija ir sudėtingesnės chirurginės intervencijos.",
-    color: "primary",
-  },
-  {
-    icon: Eye,
-    title: "Odontologija",
-    description: "Profesionalus dantų valymas, ekstrakcijos ir burnos ligų gydymas. Sveikas dantų sistema — ilgesnis gyvenimas.",
-    color: "secondary",
-  },
-  {
-    icon: FlaskConical,
-    title: "Laboratorija",
-    description: "Greitos ir tikslios kraujo, šlapimo ir kitų tyrimų analizės. Rezultatai to paties vizito metu.",
-    color: "accent",
-  },
-  {
-    icon: Microscope,
-    title: "RTG ir ultragarsas",
-    description: "Moderniausia diagnostinė įranga greitai ir tiksliai nustatyti diagnozę be papildomo streso gyvūnui.",
-    color: "primary",
-  },
-  {
-    icon: HeartPulse,
-    title: "Dermatologija",
-    description: "Odos ligos, alergijos, parazitų sukelta dermatitis. Ilgalaikiai sprendimai jūsų augintinio odai.",
-    color: "secondary",
-  },
-  {
-    icon: Zap,
-    title: "Skubi pagalba",
-    description: "Skubūs atvejai priimami be eilės. Darbo dienomis iki 21:00 — esame šalia, kai labiausiai reikia.",
-    color: "accent",
-  },
-  {
-    icon: Heart,
-    title: "Mikrobluzdikliai",
-    description: "Greitai ir neskausmingai pažymėkite savo augintinį. Registracija tarptautinėse duomenų bazėse.",
-    color: "primary",
-  },
-];
+import { ArrowRight, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
+import { coreServices, supportingServiceHighlights } from "@/data/services";
 
 const colorMap = {
   primary: {
-    bg: "bg-primary/8",
-    icon: "text-primary",
-    border: "border-primary/15",
-    hover: "hover:border-primary/40 hover:shadow-soft",
-    badge: "bg-primary/10 text-primary",
+    border: "border-primary/20",
+    badge: "bg-primary/10 text-primary border-primary/20",
+    button: "text-primary hover:text-primary-light",
   },
   secondary: {
-    bg: "bg-secondary/8",
-    icon: "text-secondary",
-    border: "border-secondary/15",
-    hover: "hover:border-secondary/40 hover:shadow-green",
-    badge: "bg-secondary/10 text-secondary",
+    border: "border-secondary/20",
+    badge: "bg-secondary/10 text-secondary border-secondary/20",
+    button: "text-secondary hover:text-secondary",
   },
   accent: {
-    bg: "bg-accent/8",
-    icon: "text-accent",
-    border: "border-accent/15",
-    hover: "hover:border-accent/40 hover:shadow-soft",
-    badge: "bg-accent/10 text-accent",
+    border: "border-accent/20",
+    badge: "bg-accent/10 text-accent border-accent/20",
+    button: "text-accent hover:text-accent",
   },
 };
 
@@ -99,60 +28,110 @@ export default function Services() {
       className="section-padding bg-background"
     >
       <div className="container-custom">
-        {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
+        <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4 tracking-wide uppercase">
-            Mūsų paslaugos
+            Pagrindinės paslaugos
           </span>
-          <h2 id="paslaugos-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Veterinarijos Klinika Kaune —{" "}
-            <span className="text-gradient-primary">visos paslaugos</span>
-          </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
-            Mūsų gyvūnų klinika Kaune turi visą reikalingą įrangą ir patirtį — nuo profilaktikos iki sudėtingų operacijų šunims, katėms ir smulkiems gyvūnėliams.
-          </p>
         </div>
 
-        {/* Services grid */}
         <ul
           role="list"
-          aria-label="Veterinarinių paslaugų sąrašas"
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5"
+          aria-label="Šešių pagrindinių paslaugų sąrašas"
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"
         >
-          {services.map((service, idx) => {
-            const colors = colorMap[service.color as keyof typeof colorMap];
-            const Icon = service.icon;
+          {coreServices.map((service, idx) => {
+            const colors = colorMap[service.theme];
             return (
-              <li
-                key={service.title}
-                className={`group relative flex flex-col p-6 bg-card rounded-2xl border ${colors.border} ${colors.hover} transition-all duration-300 hover:-translate-y-1 shadow-card`}
-                style={{ animationDelay: `${idx * 0.05}s` }}
-              >
-                <div
-                  className={`w-12 h-12 ${colors.bg} rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110`}
-                  aria-hidden="true"
+              <li key={service.slug} style={{ animationDelay: `${idx * 0.05}s` }}>
+                <Link
+                  to={`/paslaugos/${service.slug}`}
+                  className={`group block overflow-hidden rounded-[28px] border ${colors.border} bg-card shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg-custom`}
+                  aria-label={`Atidaryti paslaugos puslapį: ${service.title}`}
                 >
-                  <Icon size={22} className={colors.icon} />
-                </div>
-                <h3 className="font-bold text-foreground text-base mb-2 leading-snug">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed flex-1">
-                  {service.description}
-                </p>
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.imageAlt}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/10 to-transparent" />
+                    <h3 className="absolute left-5 bottom-5 right-5 text-2xl font-bold leading-tight text-primary-foreground">
+                      {service.title}
+                    </h3>
+                  </div>
+
+                  <div className="flex flex-col gap-5 p-6">
+                    <p className="text-sm leading-relaxed text-muted-foreground">
+                      {service.summary}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2">
+                      {service.highlights.slice(0, 3).map((highlight) => (
+                        <span
+                          key={highlight}
+                          className="rounded-full bg-muted px-3 py-1 text-xs font-medium text-foreground/80"
+                        >
+                          {highlight}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="mt-auto flex items-center justify-between gap-3">
+                      <span
+                        className={`inline-flex items-center gap-2 text-sm font-semibold transition-colors ${colors.button}`}
+                      >
+                        Plačiau
+                        <ArrowRight size={16} />
+                      </span>
+                      <span className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground">
+                        <Phone size={15} />
+                        Registruotis
+                      </span>
+                    </div>
+                  </div>
+                </Link>
               </li>
             );
           })}
         </ul>
 
-        {/* CTA */}
+        <div className="mt-10 rounded-[28px] border border-border bg-muted/40 p-6 md:p-8">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">
+                Papildomos paslaugos
+              </p>
+            </div>
+            <a
+              href="/paslaugos"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary-light"
+              aria-label="Peržiūrėti visas papildomas paslaugas"
+            >
+              Peržiūrėti visas paslaugas
+              <ArrowRight size={16} />
+            </a>
+          </div>
+
+          <div className="mt-5 flex flex-wrap gap-2">
+            {supportingServiceHighlights.map((item) => (
+              <span
+                key={item}
+                className="rounded-full border border-border bg-background px-4 py-2 text-sm text-foreground/80"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+
         <div className="text-center mt-12 flex flex-col sm:flex-row gap-3 justify-center">
           <a
             href="/paslaugos"
             className="inline-flex items-center gap-2 px-8 py-4 border-2 border-primary text-primary rounded-2xl font-semibold hover:bg-primary/5 transition-all duration-300 hover:-translate-y-1"
-            aria-label="Peržiūrėti visas paslaugas"
+            aria-label="Peržiūrėti visas klinikos paslaugas"
           >
-            Visos paslaugos
+            Visos klinikos paslaugos
           </a>
           <a
             href="#kontaktai"

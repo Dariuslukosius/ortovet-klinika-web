@@ -1,137 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-  <!-- Pagrindinis puslapis -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ortovet.lt/</loc>
-    <lastmod>2025-03-18</lastmod>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Paslaugų puslapis -->
   <url>
     <loc>https://ortovet.lt/paslaugos</loc>
-    <lastmod>2025-03-18</lastmod>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ortovet.lt/paslaugos/ortopedija-traumatologija</loc>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- Blogo sąrašo puslapis -->
+  <url>
+    <loc>https://ortovet.lt/paslaugos/odontologija</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ortovet.lt/paslaugos/minkstuju-audiniu-chirurgija</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ortovet.lt/paslaugos/echoskopija</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ortovet.lt/paslaugos/skaitmenine-rentgenografija</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ortovet.lt/paslaugos/diagnostine-iranga</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ortovet.lt/kainos</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ortovet.lt/galerija</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://ortovet.lt/blog</loc>
-    <lastmod>2025-03-18</lastmod>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Blogo straipsniai -->
-  <url>
-    <loc>https://ortovet.lt/blog/erkės-apsauga-nuo-erkių</loc>
-    <lastmod>2025-03-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://ortovet.lt/blog/cipavimas-gyvunu-ženklinimas</loc>
-    <lastmod>2025-02-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://ortovet.lt/blog/kraujo-tyrimai-gyvunams</loc>
-    <lastmod>2025-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://ortovet.lt/blog/kačių-sterilizacija-kastracija</loc>
-    <lastmod>2025-01-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://ortovet.lt/blog/dantų-priežiūra-gyvunams</loc>
-    <lastmod>2025-01-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://ortovet.lt/blog/vakcinacijos-katems</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <url>
     <loc>https://ortovet.lt/blog/kaip-pasiruosti-veterinaro-vizitui</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
-  <url>
-    <loc>https://ortovet.lt/blog/helmintu-šalinimas-augintiniams</loc>
-    <lastmod>2025-01-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
   <url>
     <loc>https://ortovet.lt/blog/vakcinacijos-grafikas-sunims</loc>
     <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://ortovet.lt/blog/ortopedinės-ligos-sunims</loc>
     <lastmod>2024-12-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
+  <url>
+    <loc>https://ortovet.lt/blog/erkės-apsauga-nuo-erkių</loc>
+    <lastmod>2025-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ortovet.lt/blog/cipavimas-gyvunu-ženklinimas</loc>
+    <lastmod>2025-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ortovet.lt/blog/kraujo-tyrimai-gyvunams</loc>
+    <lastmod>2025-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ortovet.lt/blog/kačių-sterilizacija-kastracija</loc>
+    <lastmod>2025-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ortovet.lt/blog/dantų-priežiūra-gyvunams</loc>
+    <lastmod>2025-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ortovet.lt/blog/vakcinacijos-katems</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ortovet.lt/blog/helmintu-šalinimas-augintiniams</loc>
+    <lastmod>2025-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://ortovet.lt/blog/gyvūno-mityba-sveikata</loc>
     <lastmod>2024-12-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://ortovet.lt/blog/ultragarso-tyrimas-gyvunams</loc>
     <lastmod>2024-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://ortovet.lt/blog/odos-ligos-šunims</loc>
     <lastmod>2024-12-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://ortovet.lt/blog/skubi-veterinarine-pagalba</loc>
     <lastmod>2024-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://ortovet.lt/blog/senyvo-amziaus-gyvunu-priežiūra</loc>
     <lastmod>2024-11-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
 </urlset>

@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-5">
-              <img src={logo} alt="Ortovet" className="h-20 w-auto object-contain bg-white rounded-xl p-2" />
+              <img src={logo} alt="Ortovet veterinarijos klinikos logotipas" className="h-20 w-auto object-contain bg-white rounded-xl p-2" />
             </div>
             <p className="text-primary-foreground/90 text-base leading-relaxed mb-5">
               Profesionali veterinarijos klinika Kaune. Rūpinamės jūsų augintinių sveikata su meile ir ekspertize.
@@ -57,7 +57,14 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-base mb-5">Paslaugos</h3>
             <ul className="space-y-2.5">
-              {["Bendras patikrinimas", "Vakcinacija", "Chirurgija", "Ortopedija", "Odontologija", "Diagnostika"].map((s) => (
+              {[
+                "Ortopedija / traumatologija",
+                "Odontologija",
+                "Minkštųjų audinių chirurgija",
+                "Echoskopija",
+                "Skaitmeninė rentgenografija",
+                "Diagnostinė įranga",
+              ].map((s) => (
                 <li key={s}>
                   <Link to="/paslaugos" className="text-primary-foreground/70 text-sm hover:text-primary-foreground transition-colors">{s}</Link>
                 </li>

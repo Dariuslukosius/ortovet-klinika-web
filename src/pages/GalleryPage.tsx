@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { X, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import StickyContact from "@/components/StickyContact";
+import Seo from "@/components/Seo";
+import { buildAbsoluteUrl, createBreadcrumbSchema } from "@/lib/seo";
 
 import operacine1 from "@/assets/gallery/operacine-1.webp";
 import operacine2 from "@/assets/gallery/operacine-2.webp";
@@ -52,11 +51,34 @@ export default function GalleryPage() {
   });
 
   const filtered = filter === "Visos" ? photos : photos.filter((p) => p.category === filter);
+  const gallerySchema = {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    name: "Ortovet galerija",
+    description: "Ortovet veterinarijos klinikos galerija: komanda, diagnostika, chirurgija ir klinikos aplinka.",
+    associatedMedia: photos.map((photo) => ({
+      "@type": "ImageObject",
+      contentUrl: buildAbsoluteUrl(photo.src),
+      description: photo.alt,
+      name: photo.alt,
+    })),
+  };
 
   return (
     <>
-      <Navbar />
       <main id="main-content" className="pt-24 pb-16 min-h-screen">
+        <Seo
+          title="Veterinarijos klinikos galerija Kaune"
+          description="Ortovet galerija: klinikos erdvės, komanda, diagnostinė įranga, operacinės ir kasdienė veterinarijos klinikos aplinka Kaune."
+          image={photos[0].src}
+          jsonLd={[
+            createBreadcrumbSchema([
+              { name: "Pradžia", path: "/" },
+              { name: "Galerija", path: "/galerija" },
+            ]),
+            gallerySchema,
+          ]}
+        />
         <div className="container-custom">
           {/* Back button */}
           <button
@@ -119,8 +141,6 @@ export default function GalleryPage() {
           </div>
         </div>
       </main>
-      <Footer />
-      <StickyContact />
 
       {/* Lightbox */}
       {lightbox !== null && (

@@ -1,119 +1,9 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import StickyContact from "@/components/StickyContact";
 import { Phone, ArrowRight } from "lucide-react";
-
-const serviceCategories = [
-  {
-    title: "Veterinarinė profilaktika",
-    slug: "profilaktika",
-    color: "primary" as const,
-    items: [
-      "Šunų skiepai",
-      "Skiepai nuo pasiutligės šunims",
-      "Skiepai šunims nuo erkių",
-      "Šunų parvoviruso gydymas",
-      "Kačių vakcinavimas",
-      "Kačių virusinis rinotracheitas",
-      "Endoparazitų kontrolė (kirmėlių)",
-      "Ektoparazitų kontrolė (blusos, erkės, pūkagraužiai)",
-      "Šunų nagų kirpimas",
-    ],
-  },
-  {
-    title: "Kelionė su gyvūnais",
-    slug: "kelioniniai-dokumentai",
-    color: "secondary" as const,
-    items: [
-      "Kelionė su šuniu į užsienį",
-      "Kelionė su kate į užsienį",
-      "Mikročipo implantacija ir registracija",
-      "ES naminio gyvūno paso išdavimas",
-      "Kraujo paėmimas pasiutligės antikūnų titrui nustatyti",
-      "Kasmetiniai skiepai",
-      "Konsultacija dėl reikalavimų keliaujant su gyvūnais į ES ir kitas šalis",
-      "Šunų ir kačių dokumentų tvarkymas ir paruošimas išvykti į užsienį",
-    ],
-  },
-  {
-    title: "Odos ir ausų ligos",
-    slug: "odos-ausų-ligos",
-    color: "accent" as const,
-    items: [
-      "Odos skutenų mikroskopinis tyrimas",
-      "Plauko mikroskopinis tyrimas",
-      "Bakteriologiniai odos bei ausų susirgimų tyrimai",
-    ],
-  },
-  {
-    title: "Gyvūnų chirurgija",
-    slug: "chirurgija",
-    color: "primary" as const,
-    items: [
-      "Inhaliacinė anestezija",
-      "Kačių, šunų kastracija ir sterilizacija",
-      "Auglių šalinimas",
-      "Žaizdų siuvimas",
-      "Gimdymo pagalba atliekant Cezario pjūvį",
-    ],
-  },
-  {
-    title: "Stomatologija",
-    slug: "stomatologija",
-    color: "secondary" as const,
-    items: [
-      "Šunų stomatologas",
-      "Šunų dantų valymas",
-      "Šunų dantų traukimas",
-      "Kačių dantų priežiūra",
-      "Dantų apnašų valymas",
-      "Dantų traukimas",
-      "Burnos ertmės susirgimų gydymas",
-    ],
-  },
-  {
-    title: "Laboratoriniai tyrimai",
-    slug: "laboratorija",
-    color: "accent" as const,
-    items: [
-      "Kraujo morfologinis tyrimas (IDEXX aparatu)",
-      "Kraujo biocheminis tyrimas (IDEXX aparatu)",
-      "Šlapimo bendras tyrimas (IDEXX aparatu)",
-      "Šlapimo nuosėdų tyrimas",
-      "Išmatų koprologinis tyrimas",
-      "Bakteriologiniai, virusologiniai, serologiniai tyrimai (Nacionalinė maisto laboratorija)",
-    ],
-  },
-  {
-    title: "Ultragarso tyrimai",
-    slug: "ultragarsas",
-    color: "primary" as const,
-    items: [
-      "Ultragarso tyrimai šunims",
-      "Ultragarso tyrimai katėms",
-    ],
-  },
-  {
-    title: "Rentgeno diagnostika",
-    slug: "rentgenas",
-    color: "secondary" as const,
-    items: [
-      "Rentgeno nuotrauka šunims",
-      "Rentgeno nuotrauka katėms",
-    ],
-  },
-  {
-    title: "Eutanazija ir atsisveikinimo paslaugos",
-    slug: "eutanazija",
-    color: "accent" as const,
-    items: [
-      "Šuns užmigdymas namuose",
-      "Gyvūnų kremavimas",
-    ],
-  },
-];
+import { coreServices, supportingServiceCategories } from "@/data/services";
+import Seo from "@/components/Seo";
+import { buildAbsoluteUrl, createBreadcrumbSchema } from "@/lib/seo";
 
 const colorMap = {
   primary: {
@@ -141,10 +31,33 @@ export default function ServicesPage() {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
 
+  const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Ortovet pagrindinės veterinarinės paslaugos",
+    itemListElement: coreServices.map((service, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: service.title,
+      url: buildAbsoluteUrl(`/paslaugos/${service.slug}`),
+      image: buildAbsoluteUrl(service.image),
+      description: service.summary,
+    })),
+  };
+
   return (
-    <>
-      <Navbar />
-      <main id="main-content">
+    <main id="main-content">
+        <Seo
+          title="Veterinarinės paslaugos Kaune | Ortopedija, odontologija ir diagnostika"
+          description="Ortovet veterinarijos paslaugos Kaune: ortopedija ir traumatologija, odontologija, minkštųjų audinių chirurgija, echoskopija, skaitmeninė rentgenografija ir moderni diagnostinė įranga."
+          jsonLd={[
+            createBreadcrumbSchema([
+              { name: "Pradžia", path: "/" },
+              { name: "Paslaugos", path: "/paslaugos" },
+            ]),
+            servicesSchema,
+          ]}
+        />
         {/* Hero */}
         <section className="pt-28 pb-16 bg-background">
           <div className="container-custom text-center max-w-3xl mx-auto">
@@ -158,11 +71,11 @@ export default function ServicesPage() {
               Mūsų paslaugos
             </span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-              Veterinarinių paslaugų{" "}
-              <span className="text-gradient-primary">sąrašas</span>
+              6 kertinės specializacijos ir{" "}
+              <span className="text-gradient-primary">papildomos paslaugos</span>
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Ortovet veterinarijos klinika Kaune teikia platų paslaugų spektrą — nuo profilaktikos ir vakcinacijos iki ortopedijos, chirurgijos ir diagnostikos.
+              Pirmiausia iškeliame ortopediją, chirurgiją, odontologiją ir pažangią diagnostiką. Žemiau rasite tiek svarbiausias klinikos kryptis, tiek papildomas paslaugas vienoje vietoje.
             </p>
             <a
               href="tel:+37065208000"
@@ -174,20 +87,102 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Services grid */}
+        <section className="pb-12 bg-background">
+          <div className="container-custom">
+            <div className="max-w-3xl mb-10">
+              <span className="inline-flex rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-primary">
+                Kertinės paslaugos
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
+              {coreServices.map((service) => {
+                const colors = colorMap[service.theme];
+                return (
+                  <Link
+                    key={service.slug}
+                    to={`/paslaugos/${service.slug}`}
+                    className={`group overflow-hidden rounded-[28px] border ${colors.card} bg-card shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-soft`}
+                  >
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      <img
+                        src={service.image}
+                        alt={service.imageAlt}
+                        className="h-full w-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-foreground/65 via-foreground/10 to-transparent" />
+                      <h3 className="absolute bottom-5 left-5 right-5 text-2xl font-bold leading-tight text-primary-foreground">
+                        {service.title}
+                      </h3>
+                    </div>
+
+                    <div className="p-6 md:p-7">
+                      <p className={`text-sm font-semibold uppercase tracking-[0.16em] ${colors.heading}`}>
+                        {service.description}
+                      </p>
+                      <p className="mt-4 text-base leading-relaxed text-foreground/90">
+                        {service.summary}
+                      </p>
+
+                      <div className="mt-5 space-y-4">
+                        {service.details.map((detail) => (
+                          <p key={detail} className="text-sm leading-relaxed text-muted-foreground">
+                            {detail}
+                          </p>
+                        ))}
+                      </div>
+
+                      <div className="mt-6">
+                        <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-foreground">
+                          Ką atliekame
+                        </h4>
+                        <ul className="mt-3 flex flex-col gap-2.5">
+                          {service.highlights.map((item) => (
+                            <li key={item} className="flex items-start gap-2.5 text-sm text-foreground/85">
+                              <span className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${colors.dot}`} aria-hidden="true" />
+                              {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="mt-6 flex items-center justify-between gap-3">
+                        <span className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors group-hover:bg-primary/90">
+                          <Phone size={16} />
+                          Atidaryti puslapį
+                        </span>
+                        <span className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-primary transition-colors group-hover:text-primary-light">
+                          Plačiau
+                          <ArrowRight size={16} />
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
         <section className="pb-20 bg-background">
           <div className="container-custom">
+            <div className="max-w-3xl mb-10">
+              <span className="inline-flex rounded-full bg-muted px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+                Papildomos paslaugos
+              </span>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-              {serviceCategories.map((category) => {
+              {supportingServiceCategories.map((category) => {
                 const colors = colorMap[category.color];
                 return (
                   <div
                     key={category.slug}
                     className={`bg-card rounded-2xl border ${colors.card} shadow-card hover:shadow-soft transition-all duration-300 hover:-translate-y-1 p-6 flex flex-col`}
                   >
-                    <h2 className={`font-bold text-lg mb-4 ${colors.heading}`}>
+                    <h3 className={`font-bold text-lg mb-4 ${colors.heading}`}>
                       {category.title}
-                    </h2>
+                    </h3>
                     <ul className="flex flex-col gap-2 flex-1">
                       {category.items.map((item) => (
                         <li key={item} className="flex items-start gap-2.5 text-sm text-foreground/80">
@@ -228,9 +223,6 @@ export default function ServicesPage() {
             </div>
           </div>
         </section>
-      </main>
-      <Footer />
-      <StickyContact />
-    </>
+    </main>
   );
 }

@@ -1,71 +1,46 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Phone, Menu, X } from "lucide-react";
-import { useLocation, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.jpg";
 
 const navLinks = [
-  { href: "/#apie-mus", label: "Apie mus" },
-  { href: "/paslaugos", label: "Paslaugos" },
-  { href: "/kainos", label: "Kainos" },
-  { href: "/galerija", label: "Galerija" },
-  { href: "/#atsiliepimai", label: "Atsiliepimai" },
-  { href: "/blog", label: "Blogas" },
-  { href: "/#kontaktai", label: "Kontaktai" },
+  { to: "/#apie-mus", label: "Apie mus" },
+  { to: "/paslaugos", label: "Paslaugos" },
+  { to: "/kainos", label: "Kainos" },
+  { to: "/galerija", label: "Galerija" },
+  { to: "/#atsiliepimai", label: "Atsiliepimai" },
+  { to: "/blog", label: "Blogas" },
+  { to: "/#kontaktai", label: "Kontaktai" },
 ];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation();
-
-  const isHome = location.pathname === "/";
-  const isDark = scrolled || !isHome;
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <header
       role="banner"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isDark
-          ? "bg-card/95 backdrop-blur-xl shadow-card border-b border-border"
-          : "bg-transparent"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xl shadow-card border-b border-border transition-all duration-300"
       aria-label="Pagrindinis meniu"
     >
       <div className="container-custom">
         <div className="flex items-center justify-between h-20 md:h-24">
           <Link to="/" aria-label="Ortovet – grįžti į pradžią" className="flex items-center gap-3 group">
-            <img src={logo} alt="Ortovet" className="h-16 md:h-20 w-auto object-contain rounded-2xl" />
+            <img
+              src={logo}
+              alt="Ortovet veterinarijos klinikos logotipas"
+              className="h-16 md:h-20 w-auto object-contain rounded-2xl border border-black/70"
+            />
           </Link>
 
           <nav role="navigation" aria-label="Svetainės navigacija" className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
-              link.href.includes("#") ? (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-primary/10 hover:text-primary ${
-                    isDark ? "text-foreground" : "text-primary-foreground hover:bg-white/15 hover:text-white"
-                  }`}
-                >
-                  {link.label}
-                </a>
-              ) : (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-primary/10 hover:text-primary ${
-                    isDark ? "text-foreground" : "text-primary-foreground hover:bg-white/15 hover:text-white"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              )
+              <Link
+                key={link.to}
+                to={link.to}
+                className="px-4 py-2 rounded-lg text-base md:text-lg font-medium text-foreground transition-all duration-200 hover:bg-primary/10 hover:text-primary"
+              >
+                {link.label}
+              </Link>
             ))}
           </nav>
 
@@ -73,11 +48,7 @@ export default function Navbar() {
             <a
               href="tel:+37065208000"
               aria-label="Skambinti: (0-652) 08000"
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 ${
-                isDark
-                  ? "bg-primary text-primary-foreground hover:bg-primary-light shadow-card hover:shadow-soft"
-                  : "glass text-primary-foreground hover:bg-white/20"
-              }`}
+              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-primary text-primary-foreground text-sm font-semibold shadow-card transition-all duration-200 hover:bg-primary-light hover:shadow-soft"
             >
               <Phone size={15} aria-hidden="true" />
               <span>(0-652) 08000</span>
@@ -89,9 +60,7 @@ export default function Navbar() {
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             aria-label={menuOpen ? "Uždaryti meniu" : "Atidaryti meniu"}
-            className={`md:hidden p-2 rounded-lg transition-colors ${
-              isDark ? "text-foreground hover:bg-muted" : "text-primary-foreground hover:bg-white/15"
-            }`}
+            className="md:hidden p-2 rounded-lg text-foreground transition-colors hover:bg-muted"
           >
             {menuOpen ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
           </button>
@@ -107,25 +76,14 @@ export default function Navbar() {
         >
           <div className="container-custom py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
-              link.href.includes("#") ? (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="px-4 py-3 rounded-lg text-sm font-medium text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
-                >
-                  {link.label}
-                </a>
-              ) : (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="px-4 py-3 rounded-lg text-sm font-medium text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
-                >
-                  {link.label}
-                </Link>
-              )
+              <Link
+                key={link.to}
+                to={link.to}
+                onClick={() => setMenuOpen(false)}
+                className="px-4 py-3 rounded-lg text-base font-medium text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+              >
+                {link.label}
+              </Link>
             ))}
             <a
               href="tel:+37065208000"

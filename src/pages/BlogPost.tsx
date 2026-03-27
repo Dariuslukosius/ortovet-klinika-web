@@ -1,9 +1,18 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { ArrowLeft, Calendar, Clock, Phone } from "lucide-react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import StickyContact from "@/components/StickyContact";
+import { blogImages } from "@/data/blogImages";
+import { posts } from "@/components/Blog";
+import Seo from "@/components/Seo";
+import NotFound from "@/pages/NotFound";
+import { buildAbsoluteUrl, createBreadcrumbSchema, ORGANIZATION_NAME, SITE_URL } from "@/lib/seo";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const blogPosts: Record<string, {
   title: string;
@@ -872,27 +881,57 @@ export default function BlogPost() {
   }, [slug]);
 
   if (!slug || !blogPosts[slug]) {
-    return (
-      <>
-        <Navbar />
-        <main className="min-h-screen flex flex-col items-center justify-center">
-          <h1 className="text-2xl font-bold text-foreground mb-4">Straipsnis nerastas</h1>
-          <Link to="/blog" className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all">
-            <ArrowLeft size={16} />
-            Grįžti į blogą
-          </Link>
-        </main>
-        <Footer />
-      </>
-    );
+    return <NotFound />;
   }
 
   const post = blogPosts[slug];
+  const postImage = blogImages[slug as keyof typeof blogImages];
+  const postPreview = posts.find((item) => item.slug === slug);
+  const relatedPosts = posts.filter((item) => item.slug !== slug).slice(0, 4);
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: postPreview?.excerpt ?? post.title,
+    image: postImage ? buildAbsoluteUrl(postImage.image) : buildAbsoluteUrl("/og-image.jpg"),
+    datePublished: post.date,
+    dateModified: post.date,
+    articleSection: post.category,
+    mainEntityOfPage: buildAbsoluteUrl(`/blog/${slug}`),
+    author: {
+      "@type": "Organization",
+      name: ORGANIZATION_NAME,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: ORGANIZATION_NAME,
+      url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: buildAbsoluteUrl("/og-image.jpg"),
+      },
+    },
+  };
 
   return (
-    <>
-      <Navbar />
-      <main id="main-content">
+    <main id="main-content">
+        <Seo
+          title={post.title}
+          description={postPreview?.excerpt ?? post.title}
+          image={postImage?.image}
+          type="article"
+          publishedTime={post.date}
+          modifiedTime={post.date}
+          section={post.category}
+          jsonLd={[
+            createBreadcrumbSchema([
+              { name: "Pradžia", path: "/" },
+              { name: "Blogas", path: "/blog" },
+              { name: post.title, path: `/blog/${slug}` },
+            ]),
+            articleSchema,
+          ]}
+        />
         {/* Hero */}
         <div className="gradient-hero pt-28 pb-12">
           <div className="container-custom max-w-3xl">
@@ -926,6 +965,16 @@ export default function BlogPost() {
 
         {/* Content */}
         <div className="container-custom max-w-3xl py-12">
+          {postImage ? (
+            <div className="mb-10 overflow-hidden rounded-[28px] border border-border bg-card shadow-card">
+              <img
+                src={postImage.image}
+                alt={postImage.imageAlt}
+                className="aspect-[16/9] w-full object-cover"
+              />
+            </div>
+          ) : null}
+
           <div className="prose-custom">
             {renderContent(post.content)}
           </div>
@@ -943,6 +992,49 @@ export default function BlogPost() {
             </a>
           </div>
 
+          <section className="mt-14">
+            <div className="border-t border-border/80 pt-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">Kiti straipsniai</h2>
+
+              <div className="mt-8 px-10 md:px-14">
+                <Carousel
+                  opts={{
+                    align: "start",
+                    loop: relatedPosts.length > 3,
+                  }}
+                  className="w-full"
+                >
+                  <CarouselContent>
+                    {relatedPosts.map((item) => (
+                      <CarouselItem
+                        key={item.slug}
+                        className="basis-[86%] sm:basis-1/2 xl:basis-1/3"
+                      >
+                        <Link
+                          to={`/blog/${item.slug}`}
+                          className="group block"
+                        >
+                          <div className="overflow-hidden rounded-[28px] bg-card shadow-card">
+                            <img
+                              src={item.image}
+                              alt={item.imageAlt}
+                              className="aspect-[16/11] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                            />
+                          </div>
+                          <h3 className="mt-4 text-2xl font-bold leading-tight text-foreground transition-colors duration-300 group-hover:text-primary">
+                            {item.title}
+                          </h3>
+                        </Link>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="-left-4 md:-left-6 h-10 w-10 border-border bg-background text-foreground hover:bg-muted" />
+                  <CarouselNext className="-right-4 md:-right-6 h-10 w-10 border-border bg-background text-foreground hover:bg-muted" />
+                </Carousel>
+              </div>
+            </div>
+          </section>
+
           {/* Back link */}
           <div className="mt-8 pt-8 border-t border-border">
             <Link
@@ -954,9 +1046,6 @@ export default function BlogPost() {
             </Link>
           </div>
         </div>
-      </main>
-      <Footer />
-      <StickyContact />
-    </>
+    </main>
   );
 }

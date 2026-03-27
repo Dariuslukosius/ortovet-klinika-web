@@ -1,7 +1,6 @@
 import { useEffect } from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import StickyContact from "@/components/StickyContact";
+import Seo from "@/components/Seo";
+import { createBreadcrumbSchema } from "@/lib/seo";
 
 const priceCategories = [
   {
@@ -116,10 +115,16 @@ export default function PricesPage() {
   }, []);
 
   return (
-    <>
-      <Navbar />
-      <main id="main-content" className="pt-24 pb-16 min-h-screen">
-        <div className="container-custom">
+    <main id="main-content" className="pt-24 pb-16 min-h-screen">
+      <Seo
+        title="Veterinarinių paslaugų kainos Kaune"
+        description="Ortovet veterinarijos klinikos kainynas Kaune: apžiūra, kraujo tyrimai, echoskopija, rentgenas, vakcinacijos, odontologinės paslaugos ir chirurginės procedūros."
+        jsonLd={createBreadcrumbSchema([
+          { name: "Pradžia", path: "/" },
+          { name: "Kainos", path: "/kainos" },
+        ])}
+      />
+      <div className="container-custom">
           {/* Header */}
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4 tracking-wide uppercase border border-primary/20">
@@ -176,10 +181,7 @@ export default function PricesPage() {
               Skambinti: (0-652) 08000
             </a>
           </div>
-        </div>
-      </main>
-      <Footer />
-      <StickyContact />
-    </>
+      </div>
+    </main>
   );
 }

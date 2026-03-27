@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import About from "@/components/About";
@@ -7,24 +6,24 @@ import Vets from "@/components/Vets";
 import Testimonials from "@/components/Testimonials";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import StickyContact from "@/components/StickyContact";
+import Seo from "@/components/Seo";
+import { createVeterinaryCareSchema, createWebsiteSchema } from "@/lib/seo";
 
 export default function Index() {
   return (
-    <>
-      <Navbar />
-      <main id="main-content">
-        <Hero />
-        <Services />
-        <About />
-        <Vets />
-        <Testimonials />
-        <Blog />
-        <Contact />
-      </main>
-      <Footer />
-      <StickyContact />
-    </>
+    <main id="main-content">
+      <Seo
+        title="Veterinarijos klinika Kaune | Ortopedija, odontologija ir diagnostika"
+        description="Ortovet veterinarijos klinika Kaune specializuojasi ortopedijoje, traumatologijoje, odontologijoje, minkštųjų audinių chirurgijoje ir pažangioje diagnostikoje."
+        jsonLd={[createVeterinaryCareSchema(), createWebsiteSchema()]}
+      />
+      <Hero />
+      <Services />
+      <About />
+      <Vets />
+      <Testimonials />
+      <Blog />
+      <Contact />
+    </main>
   );
 }

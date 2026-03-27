@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import vetJogaila from "@/assets/vet-jogaila.webp";
 import vetGreta from "@/assets/vet-greta.webp";
+import vetLukas from "@/assets/vets/lukas-neverovas.webp";
 
 const vets = [
   {
@@ -43,7 +44,7 @@ const vets = [
     ],
   },
   {
-    photo: null,
+    photo: vetLukas,
     photoPosition: "center top",
     name: "Lukas Neverovas",
     title: "Veterinarijos gydytojas",

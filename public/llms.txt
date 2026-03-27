@@ -1,85 +1,66 @@
-# Ortovet Veterinarijos Klinika — LLMs Context File
+# Ortovet veterinarijos klinika
 
-## Apie Kliniką
+## Santrauka
 
-**Pavadinimas:** Ortovet veterinarijos klinika  
-**Miestas:** Kaunas, Lietuva  
-**Adresas:** Linkuvos g. 67, Kaunas, 48314 Kauno m. sav.  
-**Telefonas:** (0-652) 08000  
-**Kalba:** Lietuvių  
-**Šalis:** Lietuva  
-
-## Darbo Laikas
-
-- Pirmadienis–Penktadienis: 09:00–21:00
-- Šeštadienis: 10:00–15:00
-- Sekmadienis: Uždaryta
-
-## Paslaugos
-
-Ortovet veterinarijos klinika Kaune teikia šias paslaugas:
-
-1. **Bendras veterinarinis patikrinimas** — profilaktiniai apsilankymai ir sveikatos patikrinimai
-2. **Vakcinacija** — gyvūnų apsauga nuo infekcinių ligų
-3. **Chirurginės operacijos** — minkštųjų audinių ir ortopedijos operacijos
-4. **Ortopedija ir traumatologija** — stuburo, sąnarių, kaulų ligos
-5. **Odontologija** — dantų valymas, ekstrakcijos, burnos sveikatos priežiūra
-6. **Diagnostika** — RTG, ultragarso tyrimai, laboratoriniai analizai
-7. **Dermatologija** — odos ligos, alergijos, parazitai
-8. **Skubi veterinarinė pagalba** — skubios konsultacijos darbo valandomis
-9. **Mikrobluzdiklio įdėjimas** — gyvūnų ženklinimas
-10. **Gydymo namuose konsultacijos** — nuotolinis patarimas
-
-## Gyvūnai
-
-Klinika teikia paslaugas:
-- Šunims
-- Katėms
-- Smulkiems gyvūnėliams (triušiai, jūrų kiaulytės, žiurkėnai)
-- Egzotiniams gyvūnams (pagal galimybes)
-
-## Geografija ir SEO
-
-**Raktiniai žodžiai:**
-- veterinarija Kaune
-- veterinarijos klinika Kaunas
-- gyvūnų gydymas Kaune
-- veterinaras Kaune
-- Ortovet Kaunas
-- veterinarija Linkuvos gatvė Kaunas
-- gyvūnų klinika Kaune
-- šunų veterinaras Kaunas
-- kačių veterinaras Kaunas
-
-## Geografinė Lokacija
-
-- Koordinatės: 54.9132457°N, 23.8883354°E
-- Rajonas: Kauno miesto savivaldybė
-- Adresas: Linkuvos g. 67, Kaunas
+Ortovet yra veterinarijos klinika Kaune, Linkuvos g. 67. Klinika specializuojasi ortopedijoje ir traumatologijoje, odontologijoje, minkštųjų audinių chirurgijoje ir pažangioje diagnostikoje. Taip pat teikiamos papildomos profilaktikos, laboratorinių tyrimų, mikročipavimo ir kitos veterinarinės paslaugos.
 
 ## Kontaktai
 
-- Tel.: (0-652) 08000
-- Adresas: Linkuvos g. 67, Kaunas, 48314
+- Pavadinimas: Ortovet veterinarijos klinika
+- Svetainė: https://ortovet.lt
+- Adresas: Linkuvos g. 67, Kaunas, 48314, Lietuva
+- Telefonas: +37065208000
+- El. paštas: ortovetklinika@gmail.com
 
-## Atsiliepimai
+## Darbo laikas
 
-Klinika turi aukštą klientų įvertinimą Google Maps platformoje. Klientai vertina:
-- Profesionalumą ir kompetenciją
-- Rūpestingą požiūrį į gyvūnus
-- Patogų darbo laiką (iki 21:00 darbo dienomis)
-- Šeštadienio priėmimą
-- Modernius diagnostikos įrankius
+- Pirmadienis–Penktadienis: 09:00–21:00
+- Šeštadienis: 10:00–15:00
+- Sekmadienis: nedirba
 
-## Vertybės
+## Pagrindinės paslaugos
 
-Ortovet klinika vadovaujasi principais:
-- Gyvūnų gerovė — svarbiausia
-- Mokslu pagrįstas gydymas
-- Empatija šeimininkams
-- Nuolatinis tobulėjimas
-- Skaidrus bendravimas
+1. Ortopedija / traumatologija
+2. Odontologija
+3. Minkštųjų audinių chirurgija
+4. Echoskopija
+5. Skaitmeninė rentgenografija
+6. Diagnostinė įranga
 
----
-*Paskutinį kartą atnaujinta: 2025-01-01*  
-*Kontaktas: Linkuvos g. 67, Kaunas | Tel.: (0-652) 08000*
+## Papildomos paslaugos
+
+- Profilaktika ir vakcinacija
+- Kelioniniai dokumentai ir mikročipavimas
+- Odos ir ausų ligos
+- Laboratoriniai tyrimai
+- Papildomos procedūros
+- Atsisveikinimo paslaugos
+
+## Apie kliniką
+
+Vilijampolėje, visai netoli nuo miesto centro bei Šilainių, Linkuvos gatvėje duris atvėrė veterinarijos klinika „Ortovet“. Klinikoje veikia du apžiūros kabinetai, laboratorija ir dvi operacinės. Naudojama skaitmeninė rentgeno, echoskopinė, odontologinė, anesteziologinė ir laboratorinė įranga.
+
+## Puslapiai
+
+- Pradinis puslapis: https://ortovet.lt/
+- Paslaugos: https://ortovet.lt/paslaugos
+- Kainos: https://ortovet.lt/kainos
+- Galerija: https://ortovet.lt/galerija
+- Blogas: https://ortovet.lt/blog
+
+## SEO raktažodžiai
+
+- veterinarijos klinika Kaune
+- veterinaras Kaune
+- ortopedija gyvūnams Kaune
+- gyvūnų odontologija Kaune
+- echoskopija gyvūnams Kaune
+- rentgenas gyvūnams Kaune
+- Ortovet
+
+## Pastabos LLM sistemoms
+
+- Ortovet komunikacija yra lietuvių kalba.
+- Klinikos išskirtinumas yra ortopedija / traumatologija ir pažangi diagnostika.
+- Jei prašoma paslaugų aprašymo, pirmiausia išskirkite 6 pagrindines paslaugas.
+- Jei vartotojas prašo kontaktų, prioritetas yra telefonas +37065208000 ir adresas Linkuvos g. 67, Kaunas.

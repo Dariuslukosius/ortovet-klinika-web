@@ -1,7 +1,8 @@
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { blogImages } from "@/data/blogImages";
 
-export const posts = [
+const basePosts = [
   {
     slug: "kaip-pasiruosti-veterinaro-vizitui",
     title: "Kaip tinkamai pasiruošti veterinaro vizitui Kaune?",
@@ -124,6 +125,11 @@ export const posts = [
   },
 ];
 
+export const posts = basePosts.map((post) => ({
+  ...post,
+  ...blogImages[post.slug as keyof typeof blogImages],
+}));
+
 export default function Blog() {
   const preview = posts.slice(0, 3);
 
@@ -162,7 +168,14 @@ export default function Blog() {
               className="group bg-card rounded-2xl border border-border shadow-card hover:shadow-soft transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col"
               aria-label={post.title}
             >
-              <div className="h-3 gradient-primary" aria-hidden="true" />
+              <div className="overflow-hidden">
+                <img
+                  src={post.image}
+                  alt={post.imageAlt}
+                  loading="lazy"
+                  className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+              </div>
               <div className="p-6 flex flex-col flex-1">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold">

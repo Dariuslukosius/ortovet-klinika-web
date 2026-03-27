@@ -1,0 +1,23 @@
+{
+  "name": "Ortovet veterinarijos klinika",
+  "short_name": "Ortovet",
+  "description": "Veterinarijos klinika Kaune: ortopedija, odontologija, chirurgija ir diagnostika.",
+  "lang": "lt",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}
