@@ -71,11 +71,14 @@ export default function ServicesPage() {
               Mūsų paslaugos
             </span>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-              6 kertinės specializacijos ir{" "}
-              <span className="text-gradient-primary">papildomos paslaugos</span>
+              Pagrindinės ir papildomos{" "}
+              <span className="text-gradient-primary">veterinarinės paslaugos</span>
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Pirmiausia iškeliame ortopediją, chirurgiją, odontologiją ir pažangią diagnostiką. Žemiau rasite tiek svarbiausias klinikos kryptis, tiek papildomas paslaugas vienoje vietoje.
+              Ortovet klinikoje teikiame ortopedijos, chirurgijos, odontologijos
+              ir diagnostikos paslaugas šunims bei katėms. Žemiau rasite
+              svarbiausias klinikos specializacijas ir papildomas paslaugas
+              vienoje vietoje.
             </p>
             <a
               href="tel:+37065208000"
