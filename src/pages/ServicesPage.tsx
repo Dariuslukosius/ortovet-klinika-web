@@ -48,8 +48,10 @@ export default function ServicesPage() {
   return (
     <main id="main-content">
         <Seo
-          title="Veterinarinės paslaugos Kaune | Ortopedija, odontologija ir diagnostika"
-          description="Ortovet veterinarijos paslaugos Kaune: ortopedija ir traumatologija, odontologija, minkštųjų audinių chirurgija, echoskopija, skaitmeninė rentgenografija ir moderni diagnostinė įranga."
+          title="Pagrindinės ir papildomos veterinarinės paslaugos"
+          description="Teikiame profesionalią veterinarinę pagalbą įvairiems gyvūnams – nuo profilaktikos ir diagnostikos iki gydymo bei chirurginių procedūrų. Vienoje vietoje rasite visas svarbiausias paslaugas, reikalingas jūsų augintinio sveikatai užtikrinti."
+          image="/og-services.jpg"
+          path="/paslaugos"
           jsonLd={[
             createBreadcrumbSchema([
               { name: "Pradžia", path: "/" },

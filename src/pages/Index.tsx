@@ -13,8 +13,10 @@ export default function Index() {
   return (
     <main id="main-content">
       <Seo
-        title="Veterinarijos klinika Kaune | Ortopedija, odontologija ir diagnostika"
+        title="Ortovet veterinarijos klinika Kaune"
         description="Ortovet veterinarijos klinika Kaune specializuojasi ortopedijoje, traumatologijoje, odontologijoje, minkštųjų audinių chirurgijoje ir pažangioje diagnostikoje."
+        image="/og-home.jpg"
+        path="/"
         jsonLd={[createVeterinaryCareSchema(), createWebsiteSchema()]}
       />
       <Hero />

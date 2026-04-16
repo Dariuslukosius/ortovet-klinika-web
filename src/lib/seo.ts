@@ -1,5 +1,5 @@
 export const SITE_URL = "https://ortovet.lt";
-export const DEFAULT_SEO_IMAGE = "/og-image.jpg";
+export const DEFAULT_SEO_IMAGE = "/og-home.jpg";
 export const ORGANIZATION_NAME = "Ortovet veterinarijos klinika";
 export const BUSINESS_PHONE_E164 = "+37065208000";
 export const BUSINESS_PHONE_DISPLAY = "(0-652) 08000";

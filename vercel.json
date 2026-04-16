@@ -1,5 +1,7 @@
 {
   "rewrites": [
+    { "source": "/paslaugos", "destination": "/paslaugos/index.html" },
+    { "source": "/paslaugos/", "destination": "/paslaugos/index.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
