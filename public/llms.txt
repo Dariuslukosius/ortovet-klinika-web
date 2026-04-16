@@ -7,7 +7,7 @@ Ortovet yra veterinarijos klinika Kaune, Linkuvos g. 67. Klinika specializuojasi
 ## Kontaktai
 
 - Pavadinimas: Ortovet veterinarijos klinika
-- Svetainė: https://ortovet.lt
+- Svetainė: https://ortovet-five.vercel.app
 - Adresas: Linkuvos g. 67, Kaunas, 48314, Lietuva
 - Telefonas: +37065208000
 - El. paštas: ortovetklinika@gmail.com
@@ -42,11 +42,11 @@ Vilijampolėje, visai netoli nuo miesto centro bei Šilainių, Linkuvos gatvėje
 
 ## Puslapiai
 
-- Pradinis puslapis: https://ortovet.lt/
-- Paslaugos: https://ortovet.lt/paslaugos
-- Kainos: https://ortovet.lt/kainos
-- Galerija: https://ortovet.lt/galerija
-- Blogas: https://ortovet.lt/blog
+- Pradinis puslapis: https://ortovet-five.vercel.app/
+- Paslaugos: https://ortovet-five.vercel.app/paslaugos
+- Kainos: https://ortovet-five.vercel.app/kainos
+- Galerija: https://ortovet-five.vercel.app/galerija
+- Blogas: https://ortovet-five.vercel.app/blog
 
 ## SEO raktažodžiai
 

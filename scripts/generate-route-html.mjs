@@ -11,8 +11,8 @@ const routes = [
     title: "Pagrindinės ir papildomos veterinarinės paslaugos | Ortovet",
     description:
       "Teikiame profesionalią veterinarinę pagalbą įvairiems gyvūnams – nuo profilaktikos ir diagnostikos iki gydymo bei chirurginių procedūrų. Vienoje vietoje rasite visas svarbiausias paslaugas, reikalingas jūsų augintinio sveikatai užtikrinti.",
-    canonicalUrl: "https://ortovet.lt/paslaugos",
-    imageUrl: "https://ortovet.lt/og-services.jpg",
+    canonicalUrl: "https://ortovet-five.vercel.app/paslaugos",
+    imageUrl: "https://ortovet-five.vercel.app/og-services.jpg",
   },
 ];
 

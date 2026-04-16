@@ -1,4 +1,4 @@
-export const SITE_URL = "https://ortovet.lt";
+export const SITE_URL = "https://ortovet-five.vercel.app";
 export const DEFAULT_SEO_IMAGE = "/og-home.jpg";
 export const ORGANIZATION_NAME = "Ortovet veterinarijos klinika";
 export const BUSINESS_PHONE_E164 = "+37065208000";

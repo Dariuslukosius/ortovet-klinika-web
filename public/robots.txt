@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ortovet.lt/sitemap.xml
+Sitemap: https://ortovet-five.vercel.app/sitemap.xml
