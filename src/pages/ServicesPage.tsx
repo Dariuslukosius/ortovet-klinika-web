@@ -75,10 +75,10 @@ export default function ServicesPage() {
               <span className="text-gradient-primary">veterinarinės paslaugos</span>
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Ortovet klinikoje teikiame ortopedijos, chirurgijos, odontologijos
-              ir diagnostikos paslaugas šunims bei katėms. Žemiau rasite
-              svarbiausias klinikos specializacijas ir papildomas paslaugas
-              vienoje vietoje.
+              Teikiame profesionalią veterinarinę pagalbą įvairiems gyvūnams –
+              nuo profilaktikos ir diagnostikos iki gydymo bei chirurginių
+              procedūrų. Vienoje vietoje rasite visas svarbiausias paslaugas,
+              reikalingas jūsų augintinio sveikatai užtikrinti.
             </p>
             <a
               href="tel:+37065208000"
