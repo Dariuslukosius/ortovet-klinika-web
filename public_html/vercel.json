@@ -1,9 +1,10 @@
 {
+  "buildCommand": "echo 'Ortovet deployment'",
+  "public": ".",
   "redirects": [
     {
-      "source": "/(.*)",
-      "has": [{"type": "host", "value": "ortovet-five.vercel.app"}],
-      "destination": "https://ortovet.lt/$1",
+      "source": "/:path(.*)",
+      "destination": "https://ortovet.lt/:path",
       "permanent": true
     }
   ]
