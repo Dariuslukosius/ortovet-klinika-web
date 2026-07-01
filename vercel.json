@@ -1,3 +1,5 @@
 {
-  "public": "public_html"
+  "framework": null,
+  "buildCommand": null,
+  "outputDirectory": "public_html"
 }
