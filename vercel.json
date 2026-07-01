@@ -1,5 +1,12 @@
 {
   "framework": null,
   "buildCommand": null,
-  "outputDirectory": "public_html"
+  "outputDirectory": "public_html",
+  "redirects": [
+    {
+      "source": "/:path(.*)",
+      "destination": "https://ortovet.lt/:path",
+      "permanent": true
+    }
+  ]
 }
