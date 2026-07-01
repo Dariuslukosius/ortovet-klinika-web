@@ -1,5 +1,3 @@
 {
-  "buildCommand": "echo 'Static site'",
-  "public": "public_html",
-  "redirects": []
+  "public": "public_html"
 }
