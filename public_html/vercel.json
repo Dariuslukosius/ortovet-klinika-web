@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{"type": "host", "value": "ortovet-five.vercel.app"}],
+      "destination": "https://ortovet.lt/$1",
+      "permanent": true
+    }
+  ]
+}

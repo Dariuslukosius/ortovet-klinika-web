@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Redirect old Vercel domain to the main domain
+RewriteCond %{HTTP_HOST} ^ortovet-five\.vercel\.app$ [NC]
+RewriteRule ^(.*)$ https://ortovet.lt/$1 [R=301,L]
+
+# Redirect www to non-www on the main domain
+RewriteCond %{HTTP_HOST} ^www\.ortovet\.lt$ [NC]
+RewriteRule ^(.*)$ https://ortovet.lt/$1 [R=301,L]

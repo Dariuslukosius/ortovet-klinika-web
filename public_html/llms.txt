@@ -1,0 +1,66 @@
+# Ortovet veterinarijos klinika
+
+## Santrauka
+
+Ortovet yra veterinarijos klinika Kaune, Linkuvos g. 67. Klinika specializuojasi ortopedijoje ir traumatologijoje, odontologijoje, minkštųjų audinių chirurgijoje ir pažangioje diagnostikoje. Taip pat teikiamos papildomos profilaktikos, laboratorinių tyrimų, mikročipavimo ir kitos veterinarinės paslaugos.
+
+## Kontaktai
+
+- Pavadinimas: Ortovet veterinarijos klinika
+- Svetainė: https://ortovet.lt
+- Adresas: Linkuvos g. 67, Kaunas, 48314, Lietuva
+- Telefonas: +37065208000
+- El. paštas: ortovetklinika@gmail.com
+
+## Darbo laikas
+
+- Pirmadienis–Penktadienis: 09:00–21:00
+- Šeštadienis: 10:00–15:00
+- Sekmadienis: nedirba
+
+## Pagrindinės paslaugos
+
+1. Ortopedija / traumatologija
+2. Odontologija
+3. Minkštųjų audinių chirurgija
+4. Echoskopija
+5. Skaitmeninė rentgenografija
+6. Diagnostinė įranga
+
+## Papildomos paslaugos
+
+- Profilaktika ir vakcinacija
+- Kelioniniai dokumentai ir mikročipavimas
+- Odos ir ausų ligos
+- Laboratoriniai tyrimai
+- Papildomos procedūros
+- Atsisveikinimo paslaugos
+
+## Apie kliniką
+
+Vilijampolėje, visai netoli nuo miesto centro bei Šilainių, Linkuvos gatvėje duris atvėrė veterinarijos klinika „Ortovet“. Klinikoje veikia du apžiūros kabinetai, laboratorija ir dvi operacinės. Naudojama skaitmeninė rentgeno, echoskopinė, odontologinė, anesteziologinė ir laboratorinė įranga.
+
+## Puslapiai
+
+- Pradinis puslapis: https://ortovet.lt/
+- Paslaugos: https://ortovet.lt/paslaugos
+- Kainos: https://ortovet.lt/kainos
+- Galerija: https://ortovet.lt/galerija
+- Blogas: https://ortovet.lt/blog
+
+## SEO raktažodžiai
+
+- veterinarijos klinika Kaune
+- veterinaras Kaune
+- ortopedija gyvūnams Kaune
+- gyvūnų odontologija Kaune
+- echoskopija gyvūnams Kaune
+- rentgenas gyvūnams Kaune
+- Ortovet
+
+## Pastabos LLM sistemoms
+
+- Ortovet komunikacija yra lietuvių kalba.
+- Klinikos išskirtinumas yra ortopedija / traumatologija ir pažangi diagnostika.
+- Jei prašoma paslaugų aprašymo, pirmiausia išskirkite 6 pagrindines paslaugas.
+- Jei vartotojas prašo kontaktų, prioritetas yra telefonas +37065208000 ir adresas Linkuvos g. 67, Kaunas.
